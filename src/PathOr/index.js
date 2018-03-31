@@ -1,6 +1,6 @@
 /* @flow */
 
-export type PathOr<O, P, T> = $Call<(
+export type PathOr<O: {}, P: string[], T> = $Call<(
   & (<B, C, D, E, A: $Keys<O>, V: [A, B, C, D, E]>
     (V) => $ElementType<{[E]: T, ...$Exact<PathOr<O, [A, B, C, D], {}>>}, E>)
   & (<B, C, D, A: $Keys<O>, V: [A, B, C, D]>
