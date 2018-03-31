@@ -1,0 +1,9 @@
+[lints]
+all=warn
+unclear-type=off
+untyped-import=off
+sketchy-null-mixed=off
+
+[options]
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
+include_warnings=true
