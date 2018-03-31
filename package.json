@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "Types library for flow",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lttb/flown.git"
@@ -21,7 +18,26 @@
     "url": "https://github.com/lttb/flown/issues"
   },
   "homepage": "https://github.com/lttb/flown#readme",
+  "scripts": {
+    "test": "flow check --include-warnings --show-all-errors --max-warnings 0",
+    "lint": "eslint .",
+    "check": "npm run lint && npm test",
+    "preversion": "npm run check",
+    "postversion": "git push --follow-tags && npm publish",
+    "precommit": "npm test && lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
   "dependencies": {
     "flow-bin": "^0.69.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.10.0",
+    "lint-staged": "^7.0.1"
   }
 }
