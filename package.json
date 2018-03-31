@@ -1,0 +1,27 @@
+{
+  "name": "flown",
+  "version": "0.0.0",
+  "description": "Types library for flow",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lttb/flown.git"
+  },
+  "keywords": [
+    "flow",
+    "types",
+    "flowtype"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lttb/flown/issues"
+  },
+  "homepage": "https://github.com/lttb/flown#readme",
+  "dependencies": {
+    "flow-bin": "^0.69.0"
+  }
+}
