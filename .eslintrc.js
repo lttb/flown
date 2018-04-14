@@ -8,6 +8,7 @@ module.exports = {
 
   rules: {
     semi: ['error', 'never'],
+    'semi-style': ['error', 'first'],
     'no-unused-expressions': 'off',
     'no-multi-assign': 'off',
     'no-redeclare': 'off',

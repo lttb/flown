@@ -9,5 +9,8 @@ import type {Return} from 'flown'
 
 declare function someFunction(string): string
 
+/**
+ * string
+ */
 type ReturnType = Return<typeof someFunction>
 ```
