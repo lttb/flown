@@ -2,6 +2,6 @@
 
 declare export function returnType<R>((...args: any) => R): R
 
-export type ReturnType = typeof returnType
+export type _Return = typeof returnType
 
-export type Return<T> = $Call<ReturnType, T>
+export type Return<T> = $Call<_Return, T>

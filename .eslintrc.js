@@ -12,6 +12,7 @@ module.exports = {
     'no-unused-expressions': 'off',
     'no-multi-assign': 'off',
     'no-redeclare': 'off',
+    'max-len': ['error', {ignoreComments: true}],
 
     'import/no-extraneous-dependencies': ['error', {optionalDependencies: true}],
     'import/prefer-default-export': 'off',
