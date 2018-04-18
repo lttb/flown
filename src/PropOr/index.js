@@ -1,8 +1,11 @@
 /* @flow */
 
-declare export function propOr<O, P, T>(O, P, T): $Call<(
-    & (<V: $Keys<O>>(V) => $ElementType<O, V>)
-    & (<V>(V) => T)
-), P>
+export type PropOr<O, P, T> = $Call<(
+    & (<X: Object, V: $Keys<X>>(X, V) => $ElementType<X, V>)
+    & (() => T)
+), O, P>
 
-export type PropOr<O, P, T> = $Call<typeof propOr, O, P, T>;
+
+declare export function propOr<
+  O, P, T,
+>(O, P, T): PropOr<O, P, T>

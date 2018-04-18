@@ -4,6 +4,8 @@ import type { Prop } from './'
 
 ('test': Prop<{a: 'test'}, 'a'>)
 
+;('test': Prop<{a: 'test'}, 'a'>)
+
 /**
  * $ExpectError
  *

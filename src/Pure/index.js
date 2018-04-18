@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { ReturnType } from '../Return'
+import type { _Return } from '../Return'
 
 declare function arguments<
   _A,
@@ -36,4 +36,4 @@ declare function arguments<
   $ReadOnly<_D>,
 ])
 
-export type Pure<T> = (((...args: $Call<typeof arguments, T>) => $Call<ReturnType, T>) & T) & T
+export type Pure<T> = (((...args: $Call<typeof arguments, T>) => $Call<_Return, T>) & T)

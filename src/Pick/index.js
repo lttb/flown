@@ -1,33 +1,37 @@
 /* @flow */
 
-import type { ObjOf } from '../ObjOf'
-import type { Prop } from '../Prop'
-
-declare export function pick<O, P>(O, P): $Exact<$Call<
-  & (<A>([A]) => {
-    ...$Exact<ObjOf<A, Prop<O, A>>>,
+declare export function pick<
+  O, P, A, B, C, D, E
+>(O, P): $Exact<$Call<
+  & (([A]) => {
+    ...$Exact<$ObjMapi<O,
+      & (<K: A, V>(K, V) => V)
+      & (() => (void))
+    >>,
   })
-  & (<A, B>([A, B]) => {
-    ...$Exact<ObjOf<A, Prop<O, A>>>,
-    ...$Exact<ObjOf<B, Prop<O, B>>>,
+  & (([A, B]) => {
+    ...$Exact<$ObjMapi<O,
+      & (<K: A | B, V>(K, V) => V)
+      & (() => (void))
+    >>,
   })
-  & (<A, B, C>([A, B, C]) => {
-    ...$Exact<ObjOf<A, Prop<O, A>>>,
-    ...$Exact<ObjOf<B, Prop<O, B>>>,
-    ...$Exact<ObjOf<C, Prop<O, C>>>,
+  & (([A, B, C]) => {
+    ...$Exact<$ObjMapi<O,
+      & (<K: A | B | C, V>(K, V) => V)
+      & (() => (void))
+    >>,
   })
-  & (<A, B, C, D>([A, B, C, D]) => {
-    ...$Exact<ObjOf<A, Prop<O, A>>>,
-    ...$Exact<ObjOf<B, Prop<O, B>>>,
-    ...$Exact<ObjOf<C, Prop<O, C>>>,
-    ...$Exact<ObjOf<D, Prop<O, D>>>,
+  & (([A, B, C, D]) => {
+    ...$Exact<$ObjMapi<O,
+      & (<K: A | B | C | D, V>(K, V) => V)
+      & (() => (void))
+    >>,
   })
-  & (<A, B, C, D, E>([A, B, C, D, E]) => {
-    ...$Exact<ObjOf<A, Prop<O, A>>>,
-    ...$Exact<ObjOf<B, Prop<O, B>>>,
-    ...$Exact<ObjOf<C, Prop<O, C>>>,
-    ...$Exact<ObjOf<D, Prop<O, D>>>,
-    ...$Exact<ObjOf<E, Prop<O, E>>>,
+  & (([A, B, C, D, E]) => {
+    ...$Exact<$ObjMapi<O,
+      & (<K: A | B | C | D | E, V>(K, V) => V)
+      & (() => (void))
+    >>,
   })
 , P>>
 
