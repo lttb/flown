@@ -14,6 +14,8 @@ npm i flown
 
 ## Utilities
 
+Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
+
 - [Arguments](./src/Arguments)
 - [Bind](./src/Bind)
 - [Fix](./src/Fix)
