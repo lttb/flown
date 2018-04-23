@@ -15,12 +15,18 @@ npm i flown
 ## Utilities
 
 - [Arguments](./src/Arguments)
+- [Bind](./src/Bind)
+- [Fix](./src/Fix)
+- [Flip](./src/Flip)
 - [Frozen](./src/Frozen)
-- [MatchProps](./src/MatchProps)
+- [Identity](./src/Identity)
+- [Is](./src/Is)
+- [IsCompat](./src/IsCompat)
+- [Omit](./src/Omit)
 - [Path](./src/Path)
 - [PathOr](./src/PathOr)
+- [Pick](./src/Pick)
+- [Prop](./src/Prop)
+- [PropOr](./src/PropOr)
+- [Pure](./src/Pure)
 - [Return](./src/Return)
-
-# Docs
-
-- [Tips](./docs/Tips.md)

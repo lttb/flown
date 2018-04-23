@@ -8,9 +8,12 @@ module.exports = {
 
   rules: {
     semi: ['error', 'never'],
+    'semi-style': ['error', 'first'],
     'no-unused-expressions': 'off',
     'no-multi-assign': 'off',
     'no-redeclare': 'off',
+    'max-len': ['error', {code: 120, ignoreComments: true}],
+    'no-lone-blocks': 'off',
 
     'import/no-extraneous-dependencies': ['error', {optionalDependencies: true}],
     'import/prefer-default-export': 'off',
