@@ -29,15 +29,13 @@
   "lint-staged": {
     "*.js": "eslint"
   },
-  "dependencies": {
-    "flow-bin": "^0.69.0"
-  },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.10.0",
+    "flow-bin": "^0.69.0",
     "lint-staged": "^7.0.1"
   }
 }
