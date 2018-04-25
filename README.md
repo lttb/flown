@@ -17,7 +17,6 @@ npm i flown
 Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
 
 - [Arguments](./src/Arguments)
-- [Bind](./src/Bind)
 - [Fix](./src/Fix)
 - [Flip](./src/Flip)
 - [Frozen](./src/Frozen)
@@ -25,6 +24,7 @@ Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
 - [Is](./src/Is)
 - [IsCompat](./src/IsCompat)
 - [Omit](./src/Omit)
+- [Partial](./src/Partial)
 - [Path](./src/Path)
 - [PathOr](./src/PathOr)
 - [Pick](./src/Pick)

@@ -35,4 +35,6 @@ declare export function omit<
   })
 , P>>
 
-export type Omit<O, P> = $Call<typeof omit, O, P>
+export type _Omit = typeof omit
+
+export type Omit<O, P> = $Call<_Omit, O, P>
