@@ -8,6 +8,7 @@ import { type Path } from './'
  * There is no 'hah' in {hoh: 'hoh'}
  */
 (null: Path<{hey: {hoh: 'hoh'}}, ['hey', 'hoh', 'hah']>)
+
 ;('hoh': Path<{hey: {hoh: 'hoh'}}, ['hey', 'hoh']>)
 ;({ hoh: 'hoh' }: Path<{hey: {hoh: 'hoh'}}, ['hey']>)
 
@@ -17,6 +18,7 @@ import { type Path } from './'
  * hoh2 is incmpatible with 'hoh'
  */
 ;('hoh2': Path<{hey: {hoh: 'hoh'}}, ['hey', 'hoh']>)
+
 ;('hoh': Path<{hey: {hoh: 'hoh'}}, ['hey', 'hoh']>)
 
 /**
