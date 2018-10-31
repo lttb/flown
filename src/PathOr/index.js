@@ -1,13 +1,21 @@
 /* @flow */
 
 export type PathOr<O: Object, P, T> = $Call<(
+  & (<A, B, C, D, E>([A, B, C, D, E]) => $ElementType<
+    $ElementType<$ElementType<$ElementType<$ElementType<O, A>, B>, C>, D>
+  , E>)
+  & (<A, B, C, D>([A, B, C, D]) => $ElementType<
+    $ElementType<$ElementType<$ElementType<O, A>, B>, C>
+  , D>)
   & (<A, B, C>([A, B, C]) => $ElementType<
     $ElementType<$ElementType<O, A>, B>
   , C>)
   & (<A, B>([A, B]) => $ElementType<
     $ElementType<O, A>
   , B>)
-  & (<A>([A]) => $ElementType<O, A>)
+  & (<A>([A]) => $ElementType<
+    O
+  , A>)
   & (() => T)
 ), P>
 

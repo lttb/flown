@@ -5,6 +5,7 @@ export type _Arguments =
   /**
    * Locating errors right
    */
+  & (<A, V: []>((...args: V) => any) => ([]))
   & (<A, V: [A]>((...args: V) => any) => ([A]))
   & (<A, B, V: [A, B]>((...args: V) => any) => ([A, B]))
   & (<A, B, C, V: [A, B, C]>((...args: V) => any) => ([A, B, C]))
