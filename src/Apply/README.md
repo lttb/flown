@@ -12,7 +12,7 @@ import type { Apply } from 'flown'
 type UnionFromTuple<T> = $Call<Apply<
   $ComposeReverse,
   $TupleMap<T, <X, V>(V) => ((X) => (X | V))>
->, empty<
+>, empty>
 
 declare function union<A>(...args: A): UnionFromTuple<A>
 
