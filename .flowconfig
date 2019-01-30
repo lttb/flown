@@ -3,8 +3,11 @@ all=warn
 unclear-type=off
 untyped-import=off
 sketchy-null-mixed=off
+deprecated-type=off
+deprecated-utility=off
 
 [options]
 suppress_comment=\\(.\\|\n\\)*\\$ExpectError
 suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
 include_warnings=true
+
