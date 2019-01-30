@@ -1,10 +1,10 @@
 /* @flow */
 
-import type { Apply } from '../Apply'
+import type { Apply } from '..'
 
 declare function union<T, $>(T): $Call<
   Apply<
-    $ComposeReverse,
+    $Compose,
     $TupleMap<T, <X, V>(V) => ((X) => (X | V))>,
     $,
   >,

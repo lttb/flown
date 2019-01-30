@@ -1,6 +1,6 @@
 /* @flow */
 
-import { type PropOr, propOr } from './'
+import { type PropOr, propOr } from '..'
 
 ('test': PropOr<{ a: 'test' }, 'a', null>)
 ;(null: PropOr<{ a: 'test' }, 'b', null>)

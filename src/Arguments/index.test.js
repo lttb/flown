@@ -1,14 +1,16 @@
 /* @flow */
 
-import type { Arguments } from './'
+import type { Arguments } from '..'
 
 (() => {
+  type Fn0 = () => void
   type Fn1 = (?string) => void
   type Fn2 = (string, number) => void
   type Fn3 = (string, string, string) => void
-  type Fn0 = (...args: []) => void
 
   const fn = () => undefined
+
+  ;(([]): Arguments<Fn0>)
 
   /**
    * $ExpectError
@@ -25,6 +27,14 @@ import type { Arguments } from './'
    */
   ;((['a', 'x']): Arguments<Fn2>)
   ;((['a', 'a', 'a']): Arguments<Fn3>)
+
+  /**
+   * $ExpectError
+   * Cannot cast array literal to `Arguments` because  number [1] is incompatible with string [2] in index 2.
+   */
+  ;((['a', 'a', 3]): Arguments<Fn3>)
+
+  ;((['a', 1]): Arguments<Fn2>)
 
   ;(([]): Arguments<Fn0>)
   /**

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { _Union } from './'
+import type { _Union } from '..'
 
 declare var x: $Call<_Union, [string, number, boolean]>
 ;(x: string | number | boolean)

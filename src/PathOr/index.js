@@ -19,24 +19,6 @@ export type PathOr<O: Object, P, T> = $Call<(
   & (() => T)
 ), P>
 
-/*
-export type PathOr<O: Object, P, T> = $Call<(
-  & (<A: $Keys<O>, B, C, D, E, V: [A, B, C, D, E]>
-    (V) => $ElementType<{[E]: T, ...$Exact<PathOr<O, [A, B, C, D], {}>>}, E>)
-  & (<A: $Keys<O>, B, C, D, V: [A, B, C, D]>
-    (V) => $ElementType<{[D]: T, ...$Exact<PathOr<O, [A, B, C], {}>>}, D>)
-  & (<A: $Keys<O>, B, C, V: [A, B, C]>
-    (V) => $ElementType<{[C]: T, ...$Exact<PathOr<O, [A, B], {}>>}, C>)
-  & (<A: $Keys<O>, B, V: [A, B]>
-    (V) => $ElementType<{[B]: T, ...$Exact<PathOr<O, [A], {}>>}, B>)
-  & (<A: $Keys<O>, V: [A]>
-    (V) => $ElementType<O, A>)
-  & (<V>
-    (V) => T)
-), P>
-*/
-
-
 declare function pathOr<
   O, P, T, A: $Keys<O>, B, C, D, E
 >(O, [A, B, C, D, E], T): $ElementType<{[E]: T, ...$Exact<PathOr<O, [A, B, C, D], {}>>}, E>

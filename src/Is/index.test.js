@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Is } from './'
+import type { Is } from '..'
 
 (true: Is<2, 2>)
 

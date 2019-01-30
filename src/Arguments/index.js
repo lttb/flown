@@ -1,15 +1,25 @@
 /* @flow */
 
-export type _Arguments =
-  & (<V>((...args: V) => any) => (V & V))
-  /**
-   * Locating errors right
-   */
-  & (<A, V: []>((...args: V) => any) => ([]))
-  & (<A, V: [A]>((...args: V) => any) => ([A]))
-  & (<A, B, V: [A, B]>((...args: V) => any) => ([A, B]))
-  & (<A, B, C, V: [A, B, C]>((...args: V) => any) => ([A, B, C]))
-  & (<A, B, C, D, V: [A, B, C, D]>((...args: V) => any) => ([A, B, C, D]))
-  & (<A, B, C, D, E, V: [A, B, C, D, E]>((...args: V) => any) => ([A, B, C, D, E]))
+import type { Arity } from '..'
 
-export type Arguments<T> = $Call<_Arguments, T>
+type Extract5 = <A, B, C, D, E, F: (A, B, C, D, E) => any>(F) => ([A & A, B & B, C & C, D & D, E & E])
+type Extract4 = <A, B, C, D, F: (A, B, C, D) => any>(F) => ([A & A, B & B, C & C, D & D])
+type Extract3 = <A, B, C, F: (A, B, C) => any>(F) => ([A & A, B & B, C & C])
+type Extract2 = <A, B, F: (A, B) => any>(F) => ([A & A, B & B])
+type Extract1 = <A, F: (A) => any>(F) => ([A & A])
+
+/**
+ * The trick with the intersection helps to locate errors better
+ *
+ * TODO: add some examples and explanation how it works
+ */
+type Helper<F> = (
+  & ((5) => $Call<Extract5 & Extract5, F>)
+  & ((4) => $Call<Extract4 & Extract4, F>)
+  & ((3) => $Call<Extract3 & Extract3, F>)
+  & ((2) => $Call<Extract2 & Extract2, F>)
+  & ((1) => $Call<Extract1 & Extract1, F>)
+  & ((0) => [])
+)
+
+export type Arguments<F> = ($Call<(Helper<F>), Arity<F>>)

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Omit } from './index'
+import type { Omit } from '..'
 
 ({
   a: undefined,

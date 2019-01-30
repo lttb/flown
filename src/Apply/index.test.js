@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Apply } from './'
+import type { Apply } from '..'
 
 declare function union<A, $>(...args: A): $Call<
   Apply<

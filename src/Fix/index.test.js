@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Fix } from './'
+import type { Fix } from '..'
 
 type F1 = <A, B>(A, B) => {|a: A, b: B|}
 type F2 = <A, B>(A, B) => [A, B]

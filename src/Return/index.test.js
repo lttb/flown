@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Return } from './'
+import type { Return } from '..'
 
 declare var fn: () => 'hey'
 

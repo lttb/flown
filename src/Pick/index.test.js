@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Pick } from './index'
+import type { Pick } from '..'
 
 ({ a: 1, b: 2, c: undefined }: Pick<{a: 1, b: 2, c: 3}, ['a', 'b']>)
 

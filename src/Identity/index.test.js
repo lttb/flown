@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { _Identity } from './'
+import type { _Identity } from '..'
 
 (true: $Call<_Identity, true>)
 
