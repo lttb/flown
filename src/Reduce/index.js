@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Apply } from '../Apply'
+import type { Apply } from '..'
 
 declare function reduce<Fn, A, T, $>(Fn, A, T): $Call<
   Apply<

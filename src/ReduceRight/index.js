@@ -1,11 +1,14 @@
 /* @flow */
 
-import type { Apply } from '../Apply'
+import type { Apply } from '..'
 
-declare function reduceRight<Fn, A, T>(Fn, A, T): $Call<Apply<
-  $ComposeReverse,
-  $TupleMap<T, Fn>
->, A>
+declare function reduceRight<Fn, A, T, $>(Fn, A, T): $Call<
+  Apply<
+    $ComposeReverse,
+    $TupleMap<T, Fn>,
+    $,
+  >
+, A>
 
 export type _ReduceRight = typeof reduceRight
 
