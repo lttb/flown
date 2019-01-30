@@ -1,4 +1,4 @@
-# Bind
+# Flip
 
 A helper to flip Function Type Arguments.
 
