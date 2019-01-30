@@ -16,14 +16,16 @@ npm i flown
 
 Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
 
-- [Arguments](./src/Arguments)
 - [Apply](./src/Apply)
+- [Arguments](./src/Arguments)
+- [Arity](./src/Arity)
 - [Fix](./src/Fix)
 - [Flip](./src/Flip)
 - [Frozen](./src/Frozen)
 - [Identity](./src/Identity)
 - [Is](./src/Is)
 - [IsCompat](./src/IsCompat)
+- [MergeAll](./src/MergeAll)
 - [Omit](./src/Omit)
 - [Partial](./src/Partial)
 - [Path](./src/Path)
@@ -32,5 +34,7 @@ Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
 - [Prop](./src/Prop)
 - [PropOr](./src/PropOr)
 - [Pure](./src/Pure)
+- [Reduce](./src/Reduce)
+- [ReduceRight](./src/ReduceRight)
 - [Return](./src/Return)
 - [Union](./src/Union)
