@@ -1,6 +1,6 @@
 /* @flow */
 
-import { type PathOr, pathOr } from './'
+import { type PathOr, pathOr } from '..'
 
 ('c': PathOr<{a: {b: 'c'}}, ['a', 'b'], null>)
 ;('y': PathOr<{ x: {y: 'y'} }, ['x', 'y'], null>)

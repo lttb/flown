@@ -1,6 +1,6 @@
 /* @flow */
 
-import { type Path } from './'
+import { type Path } from '..'
 
 /**
  * $ExpectError

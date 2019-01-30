@@ -1,9 +1,9 @@
 /* @flow */
 
-import type { Pure } from './'
+import type { Pure } from '..'
 
 {
-  const getX = (data: {x: number}): * => data.x
+  const getX = (data: {x: number}): number => data.x
 
   declare var _getX: Pure<typeof getX>
 
@@ -63,11 +63,9 @@ import type { Pure } from './'
 }
 
 {
-  const get = (a: ?string): * => a
+  const get = (a: ?string) => a
 
   declare var _get: Pure<typeof get>
-
-  declare var data: $ReadOnly<{x: 1}>
 
   _get('x')
   _get('y')

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Prop } from './'
+import type { Prop } from '..'
 
 ('test': Prop<{a: 'test'}, 'a'>)
 

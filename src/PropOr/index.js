@@ -6,11 +6,6 @@ declare export function propOr<O, P, T>(O, P, T): $Call<(
     & (<V: Object, K: $Keys<V>>(K, V) => $ElementType<V, K>)
     & (() => T)
 ), P, O>
-
-declare export function propOr<O, P, T>(O, P, T): $Call<
-  & (<V: Object>(V) => $ElementType<{[P]: T, ...$Exact<O>}, P>)
-  & (() => T)
-, O>
 */
 
 declare export function propOr<O, P, T>(O, P, T): $Call<

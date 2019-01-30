@@ -1,7 +1,6 @@
 /* @flow */
 
-import type { Partial, _Partial } from './'
-import type { _IsCompat } from '../IsCompat'
+import type { Partial, _Partial, _IsCompat } from '..'
 
 type _IsCompat2 = $Call<_Partial, _IsCompat, 2>
 
