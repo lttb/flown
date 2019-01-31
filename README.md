@@ -14,7 +14,9 @@ npm i flown
 
 ## Utilities
 
-Each Type has it's callable version called `_Type`, e.g. `Bind` and `_Bind`.
+Each Type has it's callable version called `_Type`, e.g. `Apply` and `_Apply`.
+
+By default each Function Type supports the arity of **5**.
 
 - [Apply](./src/Apply)
 - [Arguments](./src/Arguments)
