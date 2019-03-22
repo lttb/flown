@@ -10,7 +10,7 @@ import type {Omit} from 'flown'
 type Original = {a: 1, b: 2, c: 3, d: 4};
 type Omitted = Omit<Original, ['a', 'b']>; 
 
-// type of Omitted: {c: 3, d: 4}
+// type of Omitted: {c: 3, d: 4, a: void, b: void}
 
 ({
   a: undefined,
