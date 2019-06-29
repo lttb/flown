@@ -4,7 +4,7 @@ import type { Apply } from '..'
 
 declare function reduce<Fn, A, T, $>(Fn, A, T): $Call<
   Apply<
-    $Compose,
+    $ComposeReverse,
     $TupleMap<T, Fn>,
     $,
   >

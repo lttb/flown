@@ -4,7 +4,7 @@ import type { Apply } from '..'
 
 declare function reduceRight<Fn, A, T, $>(Fn, A, T): $Call<
   Apply<
-    $ComposeReverse,
+    $Compose,
     $TupleMap<T, Fn>,
     $,
   >
