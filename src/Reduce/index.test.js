@@ -6,13 +6,13 @@ type MergeAll<T> = Reduce<<X, V>(V) => X => { ...$Exact<X>, ...$Exact<V> }, {}, 
 
 declare function mergeAll<A>(A): MergeAll<A>
 
-const x = mergeAll([{ a: 1 }, { b: 1 }, { c: 1 }])
+const x = mergeAll([{ a: 1 }, { b: 1 }, { c: 1 }, { a: 2 }])
 
-;(x: { a: 1, b: 1, c: 1 })
+;(x: { a: 2, b: 1, c: 1 })
 
 /**
  * $ExpectError
  *
  * the type of 'c' is incompatible with number
  */
-;(x: { a: 1, b: 1, c: '1' })
+;(x: { a: 2, b: 1, c: '1' })
