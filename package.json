@@ -36,6 +36,6 @@
     "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.10.0",
     "flow-bin": "^0.91.0",
-    "lint-staged": "^7.0.1"
+    "lint-staged": "^15.2.7"
   }
 }
